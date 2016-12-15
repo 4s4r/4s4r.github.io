@@ -1,2 +1,8 @@
 node_modules
+src
 .babelrc
+.eslintrc
+package.json
+server.js
+webpack.config.js
+npm-debug.log
