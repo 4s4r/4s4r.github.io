@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Brutal Type Light';
+  src: url('../fonts/BrutalTypeLight/BrutalTypeLight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/BrutalTypeLight/BrutalTypeLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/BrutalTypeLight/BrutalTypeLight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/BrutalTypeLight/BrutalTypeLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/BrutalTypeLight/BrutalTypeLight.svg#fee63acd4617e0063530b8d672d5b118') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Brutal Type';
+  src: url('../fonts/BrutalTypeRegular/BrutalType-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/BrutalTypeRegular/BrutalType-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/BrutalTypeRegular/BrutalType-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/BrutalTypeRegular/BrutalType-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/BrutalTypeRegular/BrutalType-Regular.svg#e1281a2e4a9cbb869772bf364d6fd47b') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #e7e7e7;
+  margin: 0;
+  overflow: hidden;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: 'Brutal Type Light';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#preloader {
+  width: 300px;
+  position: absolute;
+  left: 50%; top: 48%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+#preloader_image {
+  max-width: 70px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+ #preloader_image > img {
+  position: absolute;
+  width: 100%;
+  display: block;
+ }
+
+#loading {
+  position: relative;
+  margin: 0 auto;
+  text-align: center; /* If you want to center it */
+  color: #e7e7e7;
+  font-size: 12px;
+  font-family: "Brutal Type Light";
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-top: 80px;
+}
+
+.icons_block {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+.fade_in {
+  animation: fadeIn 0.5s ease 0s forwards;
+  -webkit-animation: fadeIn 0.5s ease 0s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+.fade_out {
+  animation: fadeOut 0.5s ease 0s forwards;
+  -webkit-animation: fadeOut 0.5s ease 0s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  width: 100%;
+  max-width: 70px;
+  z-index: 9;
+  text-align: center;
+}
+
+.icon > img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon > img:hover {
+  cursor: pointer;
+}
+
+.icon > img:hover + figcaption {
+  visibility: visible;
+}
+
+figcaption {
+  position: absolute;
+  color: #e7e7e7;
+  visibility: hidden;
+  text-align: center;
+  width: 180px;
+  margin-left: -57.5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Brutal Type Light";
+}
+
+.smooth_move {
+  transition: all 0.1s linear;
+}
+
+.icons {
+  position: relative;
+  height: 100%;
+}
+
+.logo {
+  position: fixed;
+  z-index: 951;
+  width: 120px;
+}
+
+.logo > img {
+  display: block;
+  width: 100%;
+}
+.logo > img:hover {
+  cursor: pointer;
+}
+
+.about {
+  font-family: 'Brutal Type Light';
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.about:hover {
+  cursor: pointer;
+}
+
+.video_screen {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  display: none;
+  width: 100%;
+  z-index: 888;
+  filter: brightness(65%);
+  -webkit-filter: brightness(65%);
+}
+
+.video_screen.focus {
+  display: block;
+  background: rgba(255,255,255,0.5);
+}
+
+.videos_touch {
+  color: #e7e7e7 !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Brutal Type';
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.2;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.video_touch {
+  position: relative;
+  width: 100%    !important;
+  height: auto   !important;
+}
+
+.touch_link {
+  color: #e7e7e7 !important;
+  text-decoration: none;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.first_video {
+  margin-top: 65px;
+}
+
+.video_description {
+  margin-bottom: 65px;
+}
+
+.touch_img {
+  z-index: 889;
+  position: fixed;
+  width: 180px;
+  margin-bottom: 65px;
+}
