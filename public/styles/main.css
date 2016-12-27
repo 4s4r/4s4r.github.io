@@ -214,3 +214,45 @@ figcaption {
   width: 180px;
   margin-bottom: 65px;
 }
+
+.about_popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.about_img {
+  position: relative;
+  margin-top: 15%;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about_txt {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+ul {
+  padding: 0;
+  text-align: left;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
+}
