@@ -1,4 +1,5 @@
 node_modules
+!dist/public
 !dist/public/fonts/
 !dist/public/icons/
 public
