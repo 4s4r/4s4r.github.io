@@ -1,8 +1,8 @@
 node_modules
+public
 !dist/public
 !dist/public/fonts/*
 !dist/public/icons/*
-public
 src
 .babelrc
 .eslintrc
