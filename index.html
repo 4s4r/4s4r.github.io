@@ -19,13 +19,29 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <script>
-    var loadeddata = false,
-        metaArr = [];
+  var loadeddata = false,
+        metaArr = [],
+        videosArr = [
+          '<video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/HK-REPORT_preview.mp4" type="video/mp4;" ></video><video loop class="video_screen" src="https://s3-us-west-2.amazonaws.com/4s4r-video-previews/CYCLOTRON_preview.mp4" type="video/mp4;" ></video><video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/PSP_preview.mp4" type="video/mp4;" ></video><video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/TROYKA_preview.mp4" type="video/mp4;"></video><video loop class="video_screen" src="https://s3-us-west-2.amazonaws.com/4s4r-video-previews/LOGINOV_preview.mp4" type="video/mp4;"></video>',
+          '<video loop class="video_screen" src="https://s3-us-west-2.amazonaws.com/4s4r-video-previews/TURBO_YULIA_preview.mp4" type="video/mp4;"></video><video loop class="video_screen" poster="https://github.com/4s4r/4s4r_media/raw/master/posters/poster_siemens.jpg" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/SIEMENS_preview.mp4" type="video/mp4;"  ></video><video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/JAGUAR_preview.mp4" type="video/mp4;"  ></video><video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/M_SLI_preview.mp4" type="video/mp4;"  ></video><video loop class="video_screen" src="https://github.com/4s4r/4s4r_media/raw/master/preview_videos/NINA_DONIS_preview.mp4" type="video/mp4;"  ></video>'
+        ];
+
+    var videoUpload = function(ev) {
+      loadeddata = true;
+      metaArr.push(ev);
+      if (metaArr.length >= 16) {
+        window.removeEventListener('canplay', videoUpload, true);
+      }
+      if (metaArr.length == 6) {
+        setTimeout(function() { document.getElementById('videos').innerHTML += videosArr[0]; }, 500);
+      }
+      if (metaArr.length == 11) {
+        setTimeout(function() { document.getElementById('videos').innerHTML += videosArr[1]; }, 1000);
+      }
+    };
+
     if (window.addEventListener) {
-        window.addEventListener('loadeddata', function(ev) {
-                loadeddata = true;
-                metaArr.push(ev);
-        }, true);
+      window.addEventListener('canplay', videoUpload, true);
     }
   </script>
 </head>
