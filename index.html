@@ -40,7 +40,7 @@
       }
     };
 
-    if (window.addEventListener) {
+    if (window.addEventListener && Modernizr.touch !== true) {
       window.addEventListener('canplay', videoUpload, true);
     }
   </script>
