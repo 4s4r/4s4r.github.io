@@ -30,7 +30,7 @@
       loadeddata = true;
       metaArr.push(ev);
       if (metaArr.length >= 16) {
-        window.removeEventListener('canplay', videoUpload, true);
+        window.removeEventListener('loadeddata', videoUpload, true);
       }
       if (metaArr.length == 6) {
         setTimeout(function() { document.getElementById('videos').innerHTML += videosArr[0]; }, 500);
@@ -41,7 +41,7 @@
     };
 
     if (window.addEventListener && Modernizr.touch !== true) {
-      window.addEventListener('canplay', videoUpload, true);
+      window.addEventListener('loadeddata', videoUpload, true);
     }
   </script>
 </head>
